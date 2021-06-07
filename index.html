@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+   
+  </head>
+  <body>
+    <div id="theme">
+      Light &nbsp; &nbsp;
+      <span class="plan">
+        <input type="checkbox" id="switch" class="checkbox" onclick="themechange()" />
+        <label for="switch" class="toggle" id="x"></label>
+      </span>
+      &nbsp; &nbsp;Dark
+    </div>
+    <div class="main-container">
+      <div class="screen">
+        <input type="text" value="" placeholder="0" id="display-screen">
+      </div>
+      <div class="buttons">
+        <button id="numer-1" class="numer-buttons" onclick="inputval(this.id)">1</button>
+        <button id="numer-2" class="numer-buttons" onclick="inputval(this.id)">2</button>
+        <button id="numer-3" class="numer-buttons" onclick="inputval(this.id)">3</button>
+        <button id="delete" class="functional-buttons" onclick="deletef()">DEL</button>
+        <button id="numer-4" class="numer-buttons" onclick="inputval(this.id)">4</button>
+        <button id="numer-5" class="numer-buttons" onclick="inputval(this.id)">5</button>
+        <button id="numer-6" class="numer-buttons" onclick="inputval(this.id)">6</button>
+        <button id="clear" class="functional-buttons" >C</button>
+        <button id="numer-7" class="numer-buttons" onclick="inputval(this.id)">7</button>
+        <button id="numer-8" class="numer-buttons" onclick="inputval(this.id)">8</button>
+        <button id="numer-9" class="numer-buttons" onclick="inputval(this.id)">9</button>
+        <button id="sum" class="operators" onclick="operator(this.id)">+</button>
+        <button id="zero" class="numer-buttons" onclick="inputval(this.id)">0</button>
+        <button id="dbzero" class="numer-buttons" onclick="inputval(this.id)">00</button>
+        <button id="decimal" class="numer-buttons" onclick="inputval(this.id)">.</button>
+        <button id="percent" class="operators" onclick="operator(this.id)">%</button>
+      </div>
+      <div class="footer-buttons">
+        <button id="difference" class="operators" onclick="operator(this.id)">-</button>
+        <button id="product" class="operators" onclick="operator(this.id)">X</button>
+        <button id="divide" class="operators" onclick="operator(this.id)">/</button>
+        <button id="result" class="operators" onclick="resultf()">=</button>
+      </div>
+    </div>
+  </body>
+  <script src="logic.js"></script>
+</html>
