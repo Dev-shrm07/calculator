@@ -1,5 +1,5 @@
 var arrop = [];
-var operators = ["+", "/", "-", "X", "%"];
+var operators = ["+", "/", "-", "*", "%"];
 let clear = document.getElementById("clear");
 clear.addEventListener("click", function () {
   document.getElementById("display-screen").value = "";
@@ -89,7 +89,7 @@ function inputval(y) {
   let display = document.getElementById("display-screen").value;
   let num = document.getElementById(y).innerHTML;
 
-  if (display == "X") {
+  if (display == "*") {
     arrop.push(display);
     document.getElementById("display-screen").value = num;
   } else if (display == "/") {
@@ -111,7 +111,7 @@ function inputval(y) {
 
 function resultf() {
   let display = document.getElementById("display-screen").value;
-  if (display == "X") {
+  if (display == "*") {
     alert("Invalid Expression");
   } else if (display == "+") {
     alert("Invalid Expression");
@@ -128,5 +128,6 @@ function resultf() {
     let exp = expressionnew.join(" ");
     let x = eval(exp);
     document.getElementById("display-screen").value = x;
+    arrop = [];
   }
 }
